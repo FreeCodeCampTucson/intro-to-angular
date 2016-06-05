@@ -3,13 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title>Angular test</title>
+    <link rel="stylesheet" href="http://bootswatch.com/paper/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
-    <div class="blah" ng-controller="mainCtrl">
-      <input type="text" ng-model="someshit">
-      <p>
-        {{someshit}}
-      </p>
+    <div class="container" ng-controller="mainCtrl">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1>Star Wars API call fun times party of the world</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h3>Search for your favorite Star Wars character</h3>
+          <h5>...and get their details...and such.</h5>
+        </div>
+      </div>
+      <div class="row">
+        <form class="form-horizontal" ng-submit="getData()">
+          <div class="form-group">
+            <div class="col-lg-10">
+              <input type="text" ng-model="searchTerm" class="form-control" id="inputEmail" placeholder="Your favorite Star Wars Character" style="cursor: auto; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; background-repeat: no-repeat;" >
+              <button class="btn btn-lg btn-success pull-right" name="button"> Submit </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="row">
+        {{data.name}}
+      </div>
+
     </div>
     <script src="angular.js" charset="utf-8"></script>
     <script src="app.js" charset="utf-8"></script>
